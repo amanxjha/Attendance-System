@@ -14,7 +14,7 @@ from email import encoders
 
 os.system("cls") # clear the screen
 
-os.chdir(r'C:\Users\Aman Jha\Documents\GitHub\attendance') # changing directory to present directory
+os.chdir(r'C:\Users\Aman Jha\Documents\GitHub\Attendance-System') # changing directory to present directory
 
 #sending mail function
 def sendMail(fromaddr, frompasswd, toaddr, msg_subject, msgBody, filePath): 
@@ -175,7 +175,7 @@ def attendance_report():
             tot_att_cnt[prev][roll_no[i]][0]=tot
             tot_att_cnt[prev][roll_no[i]][1]=inv
         
-    os.chdir(r'C:\Users\Aman Jha\Documents\GitHub\attendance\output') # changing directory to output file for output
+    os.chdir(r'C:\Users\Aman Jha\Documents\GitHub\Attendance-System\output') # changing directory to output file for output
     main={} # making a dictionary of {string: list of all  the dates and whether they are present or absent} # this is for the attendance_report_consolidated part
 
     for i in range(sz): # for all the registered students in master list
@@ -250,7 +250,7 @@ def attendance_report():
     FROM_PASSWD = "changeme" # my password
     to_addr="changemeaswell" # to the person whom i am sending the mail
 
-    Subject="Tut 6 mail part, 2001EE22 Aman Diwakar Jha" # sybject of the mail
+    Subject="Attendance Report" # sybject of the mail
     content="PFA attendance_report_consolidated.\nBest regards." # body of the file
 
     file_path="attendance_report_consolidated.xlsx" # the file which we have to attach
